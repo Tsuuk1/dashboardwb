@@ -95,4 +95,6 @@ debit=px.line(df,
         )
 st.plotly_chart(sisa)
 st.plotly_chart(debit)
-# st.dataframe(pivot)
+
+st.subheader('Data Summary')
+st.dataframe(df)
