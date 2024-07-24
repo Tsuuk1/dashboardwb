@@ -4,11 +4,11 @@ import streamlit as st
 import numpy as np
 
 # Base Web
-st.set_page_config(page_title='Dashboard',
+st.set_page_config(page_title='Dashboard Water Balance',
                    page_icon=":bar_chart",
                    layout="wide",
                    )
-st.title('DASHBOARD')
+st.title('DASHBOARD WATER BALANCE FOR LW AREA')
 
 # Import Dataset
 excel_file = "Daily_Water_Balance.xlsx"
@@ -25,7 +25,7 @@ df = pd.read_excel(io=excel_file,
 st.subheader('Daily Report')
 
 # Filter tanggal
-ddate = st.date_input("Pick a Date",value=pd.to_datetime('2024/01/01'))
+ddate = st.date_input("Silahkan pilih tanggal yang ingin diamati:",value=pd.to_datetime('2024/01/01'))
 ddate = pd.to_datetime(ddate)
 df_daily = df[df['Tanggal'] == ddate]
 
